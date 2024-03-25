@@ -269,17 +269,16 @@ export default async function Home() {
 
   return (
     <>
-      <Container className="mt-9">
+      <Container className="mt-[150px]">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Rimil Dey : Front-end engineer
+            Hey there 👋
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            Hi there!
+            I am Rimil,
             <br />
-            I am a front-end engineer, currently working at Paradime Labs, enhancing the user experience on the Theia based editor.
-            I have over 5 years of experience building impactful and innovative products using React and Angular.
-            </p>
+            A front-end engineer with 5+ years of experience building products using React and Angular. Currently enhancing the user experience on Paradime Labs' Theia-based editor. Passionate about creating intuitive interfaces that blend design and functionality.
+          </p>
           <div className="mt-6 flex gap-6">
             <SocialLink href="https://twitter.com/rimildeyjsr" aria-label="Follow on X" icon={XIcon} />
             <SocialLink
