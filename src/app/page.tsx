@@ -252,7 +252,7 @@ export default async function Home() {
 
   return (
     <>
-      <Container className="mt-[150px]">
+      <Container className="mt-[20px]">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
             Hey there 👋
