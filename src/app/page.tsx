@@ -277,7 +277,7 @@ export default async function Home() {
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             I am Rimil,
             <br />
-            A front-end engineer with 5+ years of experience building products using React and Angular. Currently enhancing the user experience on Paradime Labs' Theia-based editor. Passionate about creating intuitive interfaces that blend design and functionality.
+            A front-end engineer with 5+ years of experience building products using React and Angular. Currently enhancing the user experience on Paradime Lab&apos;s Theia-based editor. Passionate about creating intuitive interfaces that blend design and functionality.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink href="https://twitter.com/rimildeyjsr" aria-label="Follow on X" icon={XIcon} />
