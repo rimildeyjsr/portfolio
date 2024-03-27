@@ -12,11 +12,6 @@ import logoParadime from '@/images/logos/paradimelabsLogo.jpeg';
 import logoRippling from '@/images/logos/ripplingLogo.jpeg';
 import logoAppsmith from '@/images/logos/appsmithLogo.jpeg';
 import logoSpringboard from '@/images/logos/springboardLogo.jpeg';
-import image1 from '@/images/photos/image-1.webp'
-import image2 from '@/images/photos/image-2.webp'
-import image3 from '@/images/photos/image-3.webp'
-import image4 from '@/images/photos/image-4.webp'
-import image5 from '@/images/photos/image-5.webp'
 
 function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -220,24 +215,26 @@ function Resume() {
 
 function Photos() {
   let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
+  const images = [
+    'https://res.cloudinary.com/dvyjoc8u2/image/upload/v1711554020/image-1_t4snhe.webp',
+    'https://res.cloudinary.com/dvyjoc8u2/image/upload/v1711554021/image-2_zgom7y.webp',
+    'https://res.cloudinary.com/dvyjoc8u2/image/upload/v1711554021/image-3_xvjpmq.webp',
+    'https://res.cloudinary.com/dvyjoc8u2/image/upload/v1711553969/image-4_fme3dq.webp',
+    'https://res.cloudinary.com/dvyjoc8u2/image/upload/v1711553969/image-5_v3w5nx.webp'
+  ]
 
   return (
     <div className="mt-16 sm:mt-20">
       <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-        {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
+        {images.map((image, imageIndex) => (
           <div
-            key={image.src}
+            key={image}
             className={clsx(
               'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800',
               rotations[imageIndex % rotations.length],
             )}
           >
-            <Image
-              src={image}
-              alt=""
-              sizes="(min-width: 640px) 18rem, 11rem"
-              className="absolute inset-0 h-full w-full object-cover"
-            />
+            <img className="absolute inset-0 h-full w-full object-cover" src={image} />
           </div>
         ))}
       </div>
