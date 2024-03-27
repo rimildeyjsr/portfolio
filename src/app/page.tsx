@@ -3,7 +3,6 @@ import Link from 'next/link'
 import clsx from 'clsx'
 
 import { Button } from '@/components/Button'
-import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import {
   GitHubIcon,
@@ -18,8 +17,7 @@ import image1 from '@/images/photos/image-1.jpeg'
 import image2 from '@/images/photos/image-2.jpeg'
 import image3 from '@/images/photos/image-3.jpg'
 import image4 from '@/images/photos/image-4.jpeg'
-import image5 from '@/images/photos/image-6.jpg'
-import { formatDate } from '@/lib/formatDate'
+import image5 from '@/images/photos/image-5.jpg'
 
 function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
