@@ -166,10 +166,7 @@ function Resume() {
       title: 'Product engineer',
       logo: logoParadime,
       start: '2023',
-      end: {
-        label: 'Present',
-        dateTime: new Date().getFullYear().toString(),
-      },
+      end: '2023',
     },
     {
       company: 'Appsmith',
@@ -205,8 +202,8 @@ function Resume() {
           <Role key={roleIndex} role={role} />
         ))}
       </ol>
-      <Button href="https://www.dropbox.com/scl/fi/rbaclx9jemaijej2joklx/rimil-resume.pdf?rlkey=11c2xlr1hcwki078t58v8dl89&dl=1" variant="secondary" className="group mt-6 w-full">
-        Download Resume
+      <Button href="https://drive.google.com/file/d/1v_IKqdIudmNP-Nqc2IDX_lsCNcJ9Wi7Z/view" variant="secondary" className="group mt-6 w-full">
+        View Resume
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
     </div>
@@ -252,9 +249,7 @@ export default async function Home() {
             Hey there 👋
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I am Rimil,
-            <br />
-            A front-end engineer with 5+ years of experience building products using React and Angular. Currently enhancing the user experience on Paradime Lab&apos;s Theia-based editor. Passionate about creating intuitive interfaces that blend design and functionality.
+            I am Rimil, a Senior Engineer with 6 years of proficiency in building web applications in React and Angular, fluent in TypeScript and JavaScript.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink href="https://twitter.com/rimildeyjsr" aria-label="Follow on X" icon={XIcon} />
