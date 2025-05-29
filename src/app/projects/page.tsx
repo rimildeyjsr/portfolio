@@ -49,6 +49,10 @@ const openSourceContributions = [
   {
     name: 'Operational UI (Contiamo)',
     link: { href: 'https://github.com/contiamo/operational-ui/pull/1125', label: 'github.com'},
+  },
+  {
+    name: 'Flexile (Antiwork)',
+    link: { href: 'https://github.com/antiwork/flexile/pull/119', label: 'github.com'},
   }
 ];
 

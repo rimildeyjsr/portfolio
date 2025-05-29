@@ -12,6 +12,7 @@ import logoParadime from '@/images/logos/paradimelabsLogo.jpeg';
 import logoRippling from '@/images/logos/ripplingLogo.jpeg';
 import logoAppsmith from '@/images/logos/appsmithLogo.jpeg';
 import logoSpringboard from '@/images/logos/springboardLogo.jpeg';
+import logoDeel from '@/images/logos/deelLogo.svg';
 
 function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -161,6 +162,13 @@ function Role({ role }: { role: Role }) {
 
 function Resume() {
   let resume: Array<Role> = [
+    {
+      company: 'Deel',
+      title: 'Front-end engineer',
+      logo: logoDeel,
+      start: '2024',
+      end: 'Present',
+    },
     {
       company: 'Paradime Labs',
       title: 'Product engineer',
