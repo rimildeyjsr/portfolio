@@ -231,7 +231,7 @@ export default function Home() {
                     <h2 className="max-w-[30rem] font-[family-name:var(--font-display)] text-[clamp(1.7rem,2.6vw,2.3rem)] leading-[1.12] text-[color:var(--ink)]">
                       {item.title}
                     </h2>
-                  ) : item.href ? (
+                  ) : 'href' in item && typeof item.href === 'string' ? (
                     <Link
                       href={item.href}
                       target={item.href.startsWith('http') ? '_blank' : undefined}
@@ -245,8 +245,8 @@ export default function Home() {
                     </h2>
                   )}
 
-                  {item.body ? (
-                    <p className={`max-w-[30rem] ${item.bodySmall ? 'text-sm leading-7' : 'text-base leading-8'} text-[color:var(--ink)]`}>
+                  {'body' in item && item.body ? (
+                    <p className={`max-w-[30rem] ${'bodySmall' in item && item.bodySmall ? 'text-sm leading-7' : 'text-base leading-8'} text-[color:var(--ink)]`}>
                       {item.body}
                     </p>
                   ) : null}

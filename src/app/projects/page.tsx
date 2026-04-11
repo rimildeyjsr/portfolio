@@ -44,7 +44,7 @@ export default function ProjectsPage() {
           </p>
           <ul className="mt-5 grid gap-3 text-base leading-8 text-[color:var(--ink)]">
             {openSource.map((item) => (
-              <li key={item}>{item}</li>
+              <li key={item.name}>{item.name}</li>
             ))}
           </ul>
         </section>
@@ -55,7 +55,7 @@ export default function ProjectsPage() {
           </p>
           <ul className="mt-5 grid gap-3 text-base leading-8 text-[color:var(--ink)] sm:grid-cols-2">
             {skills.map((item) => (
-              <li key={item}>{item}</li>
+              <li key={item.name}>{item.name}</li>
             ))}
           </ul>
         </section>
