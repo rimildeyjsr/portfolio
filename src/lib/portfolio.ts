@@ -9,7 +9,8 @@ export const profile = {
     linkedin: 'https://linkedin.com/in/rimildeyjsr/',
     github: 'https://github.com/rimildeyjsr',
     website: 'https://rimildeyjsr.com',
-    resume: '/rimil-dey-resume.pdf',
+    resume:
+      'https://www.dropbox.com/scl/fi/0dngczts4qccjo0j9otd5/rimil-resume.pdf?rlkey=v86zwkbau4hgm470kfbe3383y&st=znkbaxu6&dl=0',
   },
 } as const
 
