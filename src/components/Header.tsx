@@ -21,7 +21,7 @@ export function Header() {
         </Link>
 
         <nav aria-label="Primary" className="hidden md:block">
-          <ul className="flex items-center gap-6 text-sm text-[color:var(--muted)]">
+          <ul className="flex items-center gap-6 text-sm text-[color:var(--ink)]">
             {navItems.map((item) => (
               <li key={item.href}>
                 <Link

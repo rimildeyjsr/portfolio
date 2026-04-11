@@ -6,10 +6,9 @@
 @layer base {
   :root {
     color-scheme: light;
-    --paper: oklch(0.992 0.004 95);
+    --paper: #ffffff;
     --surface: oklch(0.978 0.008 100);
     --ink: oklch(0.19 0.01 88);
-    --muted: oklch(0.47 0.012 88);
     --line: oklch(0.89 0.008 96);
     --line-strong: oklch(0.82 0.012 96);
     --accent: #00610e;
@@ -19,9 +18,7 @@
 
   html {
     scroll-behavior: smooth;
-    background:
-      radial-gradient(circle at top left, color-mix(in srgb, var(--accent) 6%, white 94%), transparent 28%),
-      linear-gradient(to bottom, var(--paper), var(--paper));
+    background: #ffffff;
   }
 
   body {
@@ -161,19 +158,6 @@
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  @supports (animation-timeline: view()) {
-    .reveal-on-scroll {
-      opacity: 0;
-      transform: translate3d(0, 16px, 0);
-      animation: section-reveal linear both;
-      animation-timeline: view();
-      animation-range: entry 15% cover 30%;
-      will-change: transform, opacity;
-    }
-  }
-}
-
 @media (prefers-reduced-motion: no-preference) and (hover: hover) {
   .nav-glow {
     transition:
@@ -198,14 +182,3 @@
   }
 }
 
-@keyframes section-reveal {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 20px, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}

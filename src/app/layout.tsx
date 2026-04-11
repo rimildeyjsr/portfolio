@@ -1,17 +1,17 @@
 import type { Metadata } from 'next'
-import { Bodoni_Moda, Instrument_Sans } from 'next/font/google'
+import { Inter_Tight, Source_Serif_4 } from 'next/font/google'
 
 import { Layout } from '@/components/Layout'
 
 import '@/styles/tailwind.css'
 
-const display = Bodoni_Moda({
+const display = Inter_Tight({
   subsets: ['latin'],
   variable: '--font-display',
-  weight: ['400', '500', '600'],
+  weight: ['400', '500', '600', '700'],
 })
 
-const body = Instrument_Sans({
+const body = Source_Serif_4({
   subsets: ['latin'],
   variable: '--font-body',
   weight: ['400', '500', '600'],
@@ -20,7 +20,7 @@ const body = Instrument_Sans({
 const siteUrl = 'https://rimildeyjsr.com'
 const title = 'Rimil Dey — Senior frontend engineer'
 const description =
-  'Luxury editorial portfolio for Rimil Dey, a senior frontend engineer focused on redesigning complex product surfaces, improving reliability, and shipping calm, responsive interfaces.'
+  'Portfolio for Rimil Dey, a senior frontend engineer focused on improving complex product surfaces, strengthening reliability, and shipping responsive interfaces.'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
