@@ -2,3 +2,210 @@
 @import 'tailwindcss/components';
 @import './prism.css';
 @import 'tailwindcss/utilities';
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --paper: oklch(0.992 0.004 95);
+    --surface: oklch(0.978 0.008 100);
+    --ink: oklch(0.19 0.01 88);
+    --muted: oklch(0.47 0.012 88);
+    --line: oklch(0.89 0.008 96);
+    --line-strong: oklch(0.82 0.012 96);
+    --accent: #00610e;
+    --ease-refined: cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-gentle: cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background:
+      radial-gradient(circle at top left, color-mix(in srgb, var(--accent) 6%, white 94%), transparent 28%),
+      linear-gradient(to bottom, var(--paper), var(--paper));
+  }
+
+  body {
+    min-width: 320px;
+    background: transparent;
+    color: var(--ink);
+    font-family: var(--font-body), sans-serif;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--accent) 14%, white 86%);
+    color: var(--ink);
+  }
+
+  a,
+  button {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer components {
+  .quiet-underline {
+    background-image: linear-gradient(
+      to right,
+      color-mix(in srgb, var(--accent) 40%, transparent 60%),
+      color-mix(in srgb, var(--accent) 40%, transparent 60%)
+    );
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 0 1px;
+    text-decoration: none;
+    transition:
+      background-size 320ms var(--ease-gentle),
+      color 220ms var(--ease-gentle),
+      transform 220ms var(--ease-gentle);
+  }
+
+  .quiet-underline:hover,
+  .quiet-underline:focus-visible {
+    background-size: 100% 1px;
+  }
+
+  .motion-enter {
+    animation: rise-in 700ms var(--ease-refined) both;
+  }
+
+  .motion-delay-1 {
+    animation-delay: 80ms;
+  }
+
+  .motion-delay-2 {
+    animation-delay: 140ms;
+  }
+
+  .motion-delay-3 {
+    animation-delay: 220ms;
+  }
+
+  .reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+  }
+
+  .delight-shift {
+    transition: transform 320ms var(--ease-gentle), color 220ms var(--ease-gentle);
+  }
+
+  .delight-shift:hover {
+    transform: translate3d(0, -2px, 0);
+  }
+
+  .button-editorial {
+    position: relative;
+    overflow: hidden;
+    transition:
+      transform 220ms var(--ease-gentle),
+      border-color 240ms var(--ease-gentle),
+      background-color 240ms var(--ease-gentle),
+      color 240ms var(--ease-gentle),
+      box-shadow 260ms var(--ease-gentle);
+  }
+
+  .button-editorial::after {
+    content: '';
+    position: absolute;
+    inset: 1px;
+    border-radius: inherit;
+    background: linear-gradient(
+      110deg,
+      transparent 0%,
+      color-mix(in srgb, white 45%, transparent 55%) 46%,
+      transparent 60%
+    );
+    transform: translate3d(-130%, 0, 0);
+    opacity: 0;
+    transition:
+      transform 720ms var(--ease-gentle),
+      opacity 240ms var(--ease-gentle);
+    pointer-events: none;
+  }
+
+  .button-editorial:hover {
+    transform: translate3d(0, -1px, 0);
+    box-shadow: 0 18px 36px -28px color-mix(in srgb, var(--ink) 28%, transparent 72%);
+  }
+
+  .button-editorial:hover::after,
+  .button-editorial:focus-visible::after {
+    opacity: 0.55;
+    transform: translate3d(130%, 0, 0);
+  }
+
+  .button-editorial:active {
+    transform: translate3d(0, 0, 0) scale3d(0.99, 0.99, 1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .motion-enter,
+  .motion-delay-1,
+  .motion-delay-2,
+  .motion-delay-3,
+  .reveal-on-scroll,
+  .delight-shift,
+  .button-editorial,
+  .button-editorial::after,
+  .quiet-underline {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translate3d(0, 16px, 0);
+      animation: section-reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 15% cover 30%;
+      will-change: transform, opacity;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) and (hover: hover) {
+  .nav-glow {
+    transition:
+      color 220ms var(--ease-gentle),
+      transform 220ms var(--ease-gentle);
+  }
+
+  .nav-glow:hover {
+    transform: translate3d(0, -1px, 0);
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes section-reveal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}

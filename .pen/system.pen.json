@@ -1,0 +1,120 @@
+{
+  "version": 1,
+  "tool": "pencil",
+  "project": {
+    "name": "Rimil Dey portfolio",
+    "type": "single-page editorial portfolio",
+    "status": "design-only",
+    "lastUpdated": "2026-04-11"
+  },
+  "designContext": {
+    "goals": [
+      "Convert recruiters and engineering managers for full-time senior frontend roles",
+      "Support consulting and freelance credibility",
+      "Present Rimil as design-minded, product-aware, and technically rigorous"
+    ],
+    "audiences": [
+      "Recruiters",
+      "Engineering managers",
+      "Design-minded product teams"
+    ],
+    "tone": [
+      "editorial",
+      "modern",
+      "calm",
+      "sophisticated",
+      "approachable"
+    ],
+    "references": [
+      {
+        "name": "Vogue",
+        "reason": "Confident typography, strong pacing, editorial rhythm"
+      },
+      {
+        "name": "Shopify Editions Winter 2026",
+        "reason": "Premium composition, storytelling density, polished digital publication feel"
+      }
+    ],
+    "antiPatterns": [
+      "template-like hero with generic headshot and skill pills",
+      "dashboard-style metric tiles as the dominant visual language",
+      "developer rainbow gradients and glowing dark UI",
+      "dense badge clouds for tech stack",
+      "hover-only interactions or hidden critical content"
+    ]
+  },
+  "siteConcept": {
+    "name": "The Editorial Dossier",
+    "summary": "A single-page portfolio composed like a personal editorial dossier: an opening statement, a current chapter, selected evidence, a career ledger, and a quiet closing contact section.",
+    "whyThisDirection": [
+      "A single-page flow reduces recruiter friction and keeps narrative control tight",
+      "Editorial sequencing suits Rimil's calm premium positioning better than standard three-page portfolio templates",
+      "The structure lets impact and taste lead before raw chronology"
+    ]
+  },
+  "theme": {
+    "defaultMode": "light",
+    "supportsDarkMode": true,
+    "palette": {
+      "paper": "oklch(0.97 0.01 85)",
+      "paperElevated": "oklch(0.94 0.015 85)",
+      "ink": "oklch(0.25 0.02 40)",
+      "mutedInk": "oklch(0.45 0.015 40)",
+      "accent": "oklch(0.58 0.08 55)",
+      "accentSoft": "oklch(0.9 0.03 55)",
+      "rule": "oklch(0.83 0.015 65)",
+      "darkPaper": "oklch(0.18 0.015 40)",
+      "darkInk": "oklch(0.92 0.01 85)"
+    },
+    "typography": {
+      "displayIntent": "high-contrast editorial serif with graceful curves",
+      "bodyIntent": "refined readable sans with neutral warmth",
+      "notes": [
+        "Use a distinctive display face and separate body face",
+        "Cap body measure at 65-72ch",
+        "Use fluid editorial sizing for major headings only"
+      ]
+    },
+    "spacingScale": [4, 8, 12, 16, 24, 32, 48, 64, 96, 128],
+    "shapeLanguage": {
+      "corners": "mostly square with occasional soft 12-16px radii on media",
+      "borders": "hairline rules and section dividers over heavy cards",
+      "shadows": "minimal; rely on contrast and rhythm first"
+    },
+    "motion": {
+      "style": "quiet fade and translate only",
+      "reducedMotion": "all non-essential transitions collapse to instant",
+      "notes": [
+        "No decorative parallax",
+        "No layout animation for primary content",
+        "Micro-interactions should feel editorial, not app-like"
+      ]
+    }
+  },
+  "engineeringGuardrails": {
+    "responsive": [
+      "mobile-first",
+      "single-column reading flow on small screens",
+      "selective multi-column editorial moments on tablet and desktop",
+      "max-width composition on large desktop"
+    ],
+    "performance": [
+      "static/server-rendered content first",
+      "minimal client JS",
+      "optimized images with explicit dimensions",
+      "avoid layout shift and heavy animation libs"
+    ],
+    "seo": [
+      "one clear H1",
+      "semantic landmarks",
+      "descriptive metadata and social cards",
+      "crawlable content in HTML"
+    ],
+    "accessibility": [
+      "keyboard navigable",
+      "visible focus states",
+      "sufficient contrast",
+      "no hover-only critical interactions"
+    ]
+  }
+}

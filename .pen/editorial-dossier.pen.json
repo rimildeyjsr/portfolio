@@ -1,0 +1,258 @@
+{
+  "version": 1,
+  "tool": "pencil",
+  "canvas": {
+    "id": "editorial-dossier",
+    "name": "Rimil Dey — editorial dossier concept",
+    "background": "oklch(0.97 0.01 85)",
+    "description": "Single-page Pencil canvas for a premium editorial portfolio. One flowing page with chapter-like sections rather than a conventional homepage/about/projects split.",
+    "views": [
+      {
+        "id": "mobile",
+        "label": "Mobile",
+        "width": 390,
+        "height": 5200,
+        "sections": [
+          {
+            "id": "masthead",
+            "y": 0,
+            "height": 760,
+            "layout": "stack",
+            "intent": "Immediate clarity and premium first impression",
+            "elements": [
+              {
+                "type": "topbar",
+                "content": ["Rimil Dey", "Resume", "Contact"],
+                "notes": "Sticky, minimal, text-forward"
+              },
+              {
+                "type": "eyebrow",
+                "content": "Currently at Cercli · 7 years experience"
+              },
+              {
+                "type": "headline",
+                "content": "I design clarity into complex product surfaces.",
+                "style": "display-xl"
+              },
+              {
+                "type": "body",
+                "content": "Senior frontend engineer shipping calm, responsive interfaces with strong product judgment and frontend discipline."
+              },
+              {
+                "type": "ctaRow",
+                "content": ["View resume", "Email", "LinkedIn"],
+                "notes": "Primary action remains obvious without oversized buttons"
+              },
+              {
+                "type": "annotation",
+                "content": "Optional portrait cropped as a quiet editorial inset, not a giant hero photo"
+              }
+            ]
+          },
+          {
+            "id": "current-chapter",
+            "y": 760,
+            "height": 680,
+            "layout": "stack",
+            "intent": "Show what Rimil is doing now and why it matters",
+            "elements": [
+              {
+                "type": "sectionLabel",
+                "content": "Current chapter"
+              },
+              {
+                "type": "quoteBlock",
+                "content": "At Cercli, I work on redesigning financial product surfaces so they become more intuitive, responsive, and easier to trust."
+              },
+              {
+                "type": "bulletNarrative",
+                "content": [
+                  "Dashboard redesigns and responsive refactors",
+                  "Payslips, payments, and expense card flows",
+                  "Testing discipline and maintainable UI foundations"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "evidence-strip",
+            "y": 1440,
+            "height": 840,
+            "layout": "stack",
+            "intent": "Replace skill-grid tropes with focused proof",
+            "elements": [
+              {
+                "type": "sectionLabel",
+                "content": "Selected evidence"
+              },
+              {
+                "type": "editorialCards",
+                "variant": "rule-separated",
+                "content": [
+                  {
+                    "kicker": "Redesign",
+                    "title": "Complex dashboards made clearer",
+                    "body": "Led redesign and responsive refactor work across product surfaces with calmer information hierarchy."
+                  },
+                  {
+                    "kicker": "Reliability",
+                    "title": "Frontend systems built to last",
+                    "body": "Raised test coverage, modernized code paths, and reduced regressions in high-usage flows."
+                  },
+                  {
+                    "kicker": "Impact",
+                    "title": "Outcomes, not just implementation",
+                    "body": "Work tied to validation speed, bug reduction, support reduction, and operational efficiency."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "career-ledger",
+            "y": 2280,
+            "height": 1540,
+            "layout": "stack",
+            "intent": "Turn chronology into an editorial ledger instead of a resume dump",
+            "elements": [
+              {
+                "type": "sectionLabel",
+                "content": "Career ledger"
+              },
+              {
+                "type": "timelineList",
+                "content": [
+                  "Cercli — Member of Technical Staff — Aug 2025 to Present",
+                  "Deel — Senior Front-end Engineer — Jul 2024 to Aug 2025",
+                  "Paradime Labs — Senior Front-end Engineer — Jun 2023 to May 2024",
+                  "Appsmith — Senior Front-end Engineer — Mar 2022 to Jun 2023",
+                  "Rippling — Software Engineer (UI) — Apr 2021 to Feb 2022",
+                  "Springboard — Software Engineer — Jun 2018 to Mar 2021"
+                ],
+                "notes": "On mobile, use compressed cards with a reveal for top 2-3 bullets each"
+              }
+            ]
+          },
+          {
+            "id": "oss-and-tools",
+            "y": 3820,
+            "height": 620,
+            "layout": "stack",
+            "intent": "Show breadth without turning it into a badge cloud",
+            "elements": [
+              {
+                "type": "sectionLabel",
+                "content": "Open source and tools"
+              },
+              {
+                "type": "splitList",
+                "content": {
+                  "openSource": ["FAST", "Reactist", "Operational UI", "Lexical", "Flexile"],
+                  "coreStack": ["React", "TypeScript", "Angular", "JavaScript", "HTML", "CSS & Sass"]
+                }
+              }
+            ]
+          },
+          {
+            "id": "closing-coda",
+            "y": 4440,
+            "height": 760,
+            "layout": "stack",
+            "intent": "Make next step feel quiet but obvious",
+            "elements": [
+              {
+                "type": "sectionLabel",
+                "content": "Next step"
+              },
+              {
+                "type": "headline",
+                "content": "If you're building product experiences that need care, clarity, and frontend rigor, let's talk.",
+                "style": "display-md"
+              },
+              {
+                "type": "contactBlock",
+                "content": ["rimildeyjsr@gmail.com", "LinkedIn", "GitHub", "Resume"]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tablet",
+        "label": "Tablet",
+        "width": 834,
+        "height": 4200,
+        "sections": [
+          {
+            "id": "masthead",
+            "columns": 2,
+            "notes": "Hero copy on left, portrait or current-chapter note on right"
+          },
+          {
+            "id": "evidence-strip",
+            "columns": 3,
+            "notes": "Three proof columns separated by rules, no cards if possible"
+          },
+          {
+            "id": "career-ledger",
+            "columns": 2,
+            "notes": "Timeline with year rail on left and role details on right"
+          },
+          {
+            "id": "oss-and-tools",
+            "columns": 2,
+            "notes": "OSS list and stack list balanced as editorial sidebars"
+          }
+        ]
+      },
+      {
+        "id": "desktop",
+        "label": "Desktop",
+        "width": 1440,
+        "height": 3600,
+        "sections": [
+          {
+            "id": "masthead",
+            "grid": "12-col",
+            "notes": "Asymmetric layout: giant title left, supporting chapter note and portrait inset right"
+          },
+          {
+            "id": "current-chapter",
+            "grid": "12-col",
+            "notes": "Use a magazine-like offset block with one dominant statement and supporting details"
+          },
+          {
+            "id": "evidence-strip",
+            "grid": "12-col",
+            "notes": "Three proof columns with strong typographic contrast, separated by thin rules"
+          },
+          {
+            "id": "career-ledger",
+            "grid": "12-col",
+            "notes": "Scrollable-looking but static chronology section with a left rail and dense right detail"
+          },
+          {
+            "id": "closing-coda",
+            "grid": "12-col",
+            "notes": "Large quiet closing statement and horizontally arranged contact links"
+          }
+        ]
+      }
+    ]
+  },
+  "implementationMapping": {
+    "preferredRouteModel": "single scroll-first home page plus optional supporting routes if needed later",
+    "mustKeep": [
+      "resume access in first viewport",
+      "clear hiring-oriented role statement",
+      "semantic heading hierarchy",
+      "keyboard accessible navigation and CTAs",
+      "strong line-length control"
+    ],
+    "deferOrOptional": [
+      "case study pages",
+      "full writing archive",
+      "complex animation sequences"
+    ]
+  }
+}

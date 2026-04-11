@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "source": "rimil-resume.pdf + user direction",
+  "profile": {
+    "name": "Rimil Dey",
+    "role": "Senior frontend engineer",
+    "summary": "Senior frontend engineer with 7 years of experience shipping thoughtful, responsive product experiences across high-growth teams. Known for redesigning complex surfaces, improving maintainability, and partnering closely with design and product.",
+    "location": "Bengaluru, India",
+    "contact": {
+      "site": "rimildeyjsr.com",
+      "email": "rimildeyjsr@gmail.com",
+      "phone": "+971-50-496-8939",
+      "linkedin": "https://linkedin.com/in/rimildeyjsr/",
+      "github": "https://github.com/rimildeyjsr"
+    }
+  },
+  "homepageNarrative": {
+    "eyebrow": "Currently at Cercli · Available for senior frontend roles and selective consulting",
+    "headline": "I design clarity into complex product surfaces.",
+    "dek": "A frontend engineer with product taste: redesigning dashboards, strengthening systems, and shipping interfaces that feel calm, fast, and considered.",
+    "supportingLine": "7 years across Cercli, Deel, Paradime Labs, Appsmith, Rippling, and Springboard. React, TypeScript, Angular, design systems, performance, accessibility, and product collaboration."
+  },
+  "proofThemes": [
+    {
+      "title": "Redesigns that make product surfaces easier to use",
+      "body": "Led complete redesign and responsive refactor work for card and payments experiences, simplifying UI/UX and reducing service friction."
+    },
+    {
+      "title": "Frontend systems that get more reliable over time",
+      "body": "Improved unit test coverage, modernized architecture, and built maintainable patterns that supported faster delivery with fewer regressions."
+    },
+    {
+      "title": "Engineering with measurable product impact",
+      "body": "Work tied to validation speed, support reduction, delivery velocity, reliability, and conversion of key customer requirements."
+    }
+  ],
+  "experienceHighlights": [
+    {
+      "company": "Cercli",
+      "title": "Member of Technical Staff",
+      "period": "August 2025 — Present",
+      "highlights": [
+        "Leading redesign and responsive refactor work across payroll and card dashboard surfaces",
+        "Built payslips and payments dashboard work with cross-team collaboration",
+        "Built MVP for expense cards, card controls, issuance, reports, and role-based access",
+        "Established stronger testing discipline with roughly 50% coverage on new product areas"
+      ]
+    },
+    {
+      "company": "Deel",
+      "title": "Senior Front-end Engineer",
+      "period": "July 2024 — August 2025",
+      "highlights": [
+        "Led card dashboard redesign and responsive UX improvements",
+        "Reduced customer service requests by 2% through better product usability",
+        "Contributed to expense cards and spend controls foundation"
+      ]
+    },
+    {
+      "company": "Paradime Labs",
+      "title": "Senior Front-end Engineer",
+      "period": "June 2023 — May 2024",
+      "highlights": [
+        "Built a real-time SQL parser workflow reducing friction and improving validation speed by about 5%",
+        "Improved unit test infrastructure and coverage for key flows",
+        "Implemented RBAC and audit log support for enterprise customer needs"
+      ]
+    },
+    {
+      "company": "Appsmith",
+      "title": "Senior Front-end Engineer",
+      "period": "March 2022 — June 2023",
+      "highlights": [
+        "Built auto-indentation for the JavaScript editor with visual tests",
+        "Added globally exposed postMessage support for a top-requested feature",
+        "Refactored action selector parsing from regex to AST-based parsing, reducing bugs by 8%"
+      ]
+    },
+    {
+      "company": "Rippling",
+      "title": "Software Engineer (UI)",
+      "period": "April 2021 — February 2022",
+      "highlights": [
+        "Delivered inventory management features quickly while ramping from Angular to production React",
+        "Added integration test coverage for critical flows",
+        "Migrated legacy class components to hooks"
+      ]
+    },
+    {
+      "company": "Springboard",
+      "title": "Software Engineer",
+      "period": "June 2018 — March 2021",
+      "highlights": [
+        "Reduced mentor dashboard load time from 2.5 minutes to under 5 seconds",
+        "Built mentor dashboard submission workflows reducing ops effort by about 40%",
+        "Improved tracking and analytics instrumentation"
+      ]
+    }
+  ],
+  "openSource": [
+    "FAST by Microsoft",
+    "Reactist by Doist",
+    "Operational UI by Contiamo",
+    "Lexical by Meta",
+    "Flexile by Antiwork"
+  ],
+  "skills": [
+    "React",
+    "TypeScript",
+    "JavaScript",
+    "Angular",
+    "HTML",
+    "CSS & Sass"
+  ],
+  "ctaOptions": [
+    "View resume",
+    "Email Rimil",
+    "Open LinkedIn",
+    "Browse selected work"
+  ]
+}

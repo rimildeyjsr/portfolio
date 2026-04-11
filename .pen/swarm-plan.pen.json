@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "tool": "pencil",
+  "mode": "swarm-plan",
+  "agents": [
+    {
+      "role": "typography",
+      "objective": "Refine the editorial type system and reading rhythm across breakpoints"
+    },
+    {
+      "role": "layout",
+      "objective": "Stress-test single-page composition on mobile, tablet, and large desktop"
+    },
+    {
+      "role": "content",
+      "objective": "Condense resume details into high-credibility narrative copy"
+    },
+    {
+      "role": "accessibility",
+      "objective": "Ensure focus order, heading structure, motion reduction, and contrast are preserved in the design"
+    },
+    {
+      "role": "performance",
+      "objective": "Flag any design ideas that would push the eventual implementation toward heavy JS, poor LCP, or CLS risk"
+    }
+  ],
+  "reviewChecklist": [
+    "Would a recruiter understand seniority, specialty, and current relevance in under 10 seconds?",
+    "Does the mobile composition still feel editorial rather than cramped?",
+    "Is there any section that reads like filler rather than proof?",
+    "Are resume/contact actions visible early enough?",
+    "Does the design avoid generic developer portfolio cues?"
+  ]
+}

@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rimil Dey — Editorial Dossier Preview</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --paper: oklch(100% 0 0);
+        --paper-2: oklch(96% 0.003 95);
+        --ink: oklch(21% 0.004 95);
+        --muted: oklch(43% 0.004 95);
+        --rule: oklch(84% 0.004 95);
+        --accent: #00610e;
+        --accent-soft: color-mix(in srgb, #00610e 10%, white 90%);
+        --max: 1200px;
+        --gutter: clamp(20px, 4vw, 48px);
+        --space-1: 4px;
+        --space-2: 8px;
+        --space-3: 12px;
+        --space-4: 16px;
+        --space-5: 24px;
+        --space-6: 32px;
+        --space-7: 48px;
+        --space-8: 64px;
+        --space-9: 96px;
+        --display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+        --body: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        font-family: var(--body);
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 28% 0%, color-mix(in oklab, var(--accent-soft) 45%, white 55%), transparent 32%),
+          linear-gradient(to bottom, var(--paper), var(--paper));
+      }
+
+      a { color: inherit; text-decoration: none; }
+      img { max-width: 100%; display: block; }
+
+      .page {
+        min-height: 100vh;
+      }
+
+      .shell {
+        width: min(calc(100% - (var(--gutter) * 2)), var(--max));
+        margin: 0 auto;
+      }
+
+      .rule {
+        height: 1px;
+        background: var(--rule);
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        backdrop-filter: blur(10px);
+        background: color-mix(in oklab, var(--paper) 94%, var(--accent-soft) 6%);
+        border-bottom: 1px solid color-mix(in oklab, var(--rule) 80%, white 20%);
+      }
+
+      .topbar-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-4);
+        padding: 14px 0;
+      }
+
+      .brand {
+        font-family: var(--display);
+        font-size: 1.2rem;
+        letter-spacing: -0.03em;
+      }
+
+      .nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-4);
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .hero {
+        padding: clamp(40px, 7vw, 96px) 0 clamp(48px, 8vw, 120px);
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: clamp(28px, 5vw, 72px);
+        align-items: end;
+      }
+
+      .eyebrow,
+      .section-label,
+      .kicker,
+      .meta {
+        font-size: 0.8rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .eyebrow { margin-bottom: var(--space-5); }
+
+      h1, h2, h3, blockquote, .display {
+        margin: 0;
+        font-family: var(--display);
+        font-weight: 400;
+        letter-spacing: -0.04em;
+      }
+
+      h1 {
+        max-width: 12ch;
+        font-size: clamp(3.6rem, 9vw, 8rem);
+        line-height: 0.94;
+      }
+
+      .dek {
+        margin-top: var(--space-6);
+        max-width: 36rem;
+        font-size: clamp(1.12rem, 2vw, 1.45rem);
+        line-height: 1.55;
+      }
+
+      .supporting {
+        margin-top: var(--space-5);
+        max-width: 42rem;
+        color: var(--muted);
+        font-size: 1rem;
+        line-height: 1.75;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-3);
+        margin-top: var(--space-7);
+      }
+
+      .button,
+      .text-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 0 16px;
+        border-radius: 999px;
+        border: 1px solid color-mix(in oklab, var(--rule) 88%, white 12%);
+        background: color-mix(in oklab, white 50%, var(--paper) 50%);
+        transition: transform 180ms ease, background-color 180ms ease;
+      }
+
+      .button:hover,
+      .text-link:hover { transform: translateY(-1px); }
+
+      .button.primary {
+        background: white;
+        border-color: color-mix(in oklab, var(--rule) 88%, white 12%);
+      }
+
+      .emphasis {
+        color: var(--accent);
+        font-weight: 700;
+        text-decoration: underline;
+        text-decoration-color: color-mix(in srgb, var(--accent) 45%, white 55%);
+        text-underline-offset: 0.12em;
+        text-decoration-thickness: 1.5px;
+      }
+
+      .hero-side {
+        display: grid;
+        gap: var(--space-5);
+        align-self: stretch;
+      }
+
+      .portrait {
+        aspect-ratio: 4 / 5;
+        border-radius: 22px;
+        overflow: hidden;
+        background:
+          linear-gradient(145deg, color-mix(in oklab, var(--paper-2) 90%, white 10%), color-mix(in oklab, var(--accent-soft) 22%, var(--paper) 78%));
+        border: 1px solid color-mix(in oklab, var(--rule) 78%, white 22%);
+        padding: clamp(16px, 2vw, 24px);
+        display: flex;
+        align-items: end;
+      }
+
+      .portrait-card {
+        background: color-mix(in oklab, white 70%, var(--paper) 30%);
+        border: 1px solid color-mix(in oklab, var(--rule) 72%, white 28%);
+        border-radius: 18px;
+        padding: var(--space-5);
+        width: min(100%, 22rem);
+      }
+
+      .portrait-card h2 {
+        font-size: clamp(1.55rem, 3vw, 2.2rem);
+        line-height: 1;
+        margin-bottom: var(--space-3);
+      }
+
+      .portrait-card p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
+      section {
+        padding: clamp(28px, 5vw, 56px) 0;
+      }
+
+      .section-head {
+        display: grid;
+        grid-template-columns: 220px 1fr;
+        gap: var(--space-6);
+        align-items: start;
+        margin-bottom: var(--space-6);
+      }
+
+      .section-intro {
+        max-width: 50rem;
+        font-size: clamp(1.1rem, 1.7vw, 1.35rem);
+        line-height: 1.6;
+      }
+
+      .proof-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-5);
+      }
+
+      .proof {
+        display: grid;
+        gap: var(--space-4);
+        align-content: start;
+        padding-top: var(--space-5);
+        border-top: 1px solid var(--rule);
+      }
+
+      .proof h3 {
+        font-size: clamp(1.7rem, 2.6vw, 2.25rem);
+        line-height: 1.02;
+      }
+
+      .proof p,
+      .chapter-copy,
+      .timeline-copy,
+      .list-text,
+      .footer-copy {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.75;
+        max-width: 68ch;
+      }
+
+      .chapter-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.1fr;
+        gap: clamp(28px, 5vw, 72px);
+        align-items: start;
+      }
+
+      blockquote {
+        font-size: clamp(2rem, 4vw, 3.5rem);
+        line-height: 1.02;
+        max-width: 14ch;
+      }
+
+      .bullet-list {
+        display: grid;
+        gap: var(--space-4);
+        margin-top: var(--space-5);
+      }
+
+      .bullet {
+        display: grid;
+        grid-template-columns: 22px 1fr;
+        gap: var(--space-3);
+        align-items: start;
+      }
+
+      .bullet-mark {
+        width: 10px;
+        height: 10px;
+        border-radius: 999px;
+        margin-top: 0.5rem;
+        background: color-mix(in oklab, var(--ink) 82%, white 18%);
+      }
+
+      .ledger {
+        display: grid;
+        gap: var(--space-7);
+      }
+
+      .ledger-item {
+        display: grid;
+        grid-template-columns: 220px 1fr;
+        gap: var(--space-6);
+        padding-top: var(--space-5);
+        border-top: 1px solid var(--rule);
+      }
+
+      .role h3 {
+        font-size: clamp(1.8rem, 3vw, 2.6rem);
+        line-height: 1;
+      }
+
+      .meta-stack {
+        display: grid;
+        gap: var(--space-2);
+      }
+
+      .role-title {
+        margin-top: var(--space-2);
+        font-size: 1.05rem;
+      }
+
+      .highlights {
+        display: grid;
+        gap: var(--space-3);
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      .highlights li {
+        display: grid;
+        grid-template-columns: 18px 1fr;
+        gap: var(--space-3);
+      }
+
+      .highlights li::before {
+        content: "•";
+        color: var(--accent);
+        font-size: 1.2rem;
+        line-height: 1.2;
+      }
+
+      .aside-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-7);
+      }
+
+      .list-block {
+        padding-top: var(--space-5);
+        border-top: 1px solid var(--rule);
+      }
+
+      .list-block h3 {
+        font-size: clamp(1.7rem, 2.4vw, 2.1rem);
+        margin-bottom: var(--space-4);
+      }
+
+      .list {
+        display: grid;
+        gap: var(--space-2);
+        color: var(--muted);
+      }
+
+      .closing {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: clamp(28px, 5vw, 72px);
+        align-items: end;
+      }
+
+      .closing h2 {
+        font-size: clamp(2.3rem, 5vw, 4.4rem);
+        line-height: 0.98;
+        max-width: 13ch;
+      }
+
+      .footer-links {
+        display: grid;
+        gap: var(--space-3);
+      }
+
+      .footer-links a {
+        display: inline-flex;
+        width: fit-content;
+        color: var(--muted);
+        border-bottom: 1px solid transparent;
+      }
+
+      .footer-links a:hover {
+        color: var(--ink);
+        border-bottom-color: currentColor;
+      }
+
+      .note {
+        margin-top: var(--space-7);
+        padding-top: var(--space-5);
+        border-top: 1px solid var(--rule);
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 980px) {
+        .hero-grid,
+        .chapter-grid,
+        .closing,
+        .section-head,
+        .ledger-item,
+        .aside-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .proof-grid {
+          grid-template-columns: 1fr;
+        }
+
+        h1 { max-width: 10ch; }
+      }
+
+      @media (max-width: 640px) {
+        .topbar-inner {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        h1 {
+          font-size: clamp(3rem, 17vw, 4.9rem);
+        }
+
+        .portrait {
+          min-height: 360px;
+        }
+
+        .actions {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .button,
+        .text-link {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <div class="shell topbar-inner">
+          <a href="#top" class="brand">Rimil Dey</a>
+          <nav class="nav" aria-label="Design preview navigation">
+            <a href="#chapter">Current chapter</a>
+            <a href="#evidence">Selected evidence</a>
+            <a href="#ledger">Career ledger</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </div>
+      </header>
+
+      <main id="top">
+        <section class="hero">
+          <div class="shell hero-grid">
+            <div>
+              <p class="eyebrow">Cercli · Member of Technical Staff · <span class="emphasis">7 years</span> of experience</p>
+              <h1>Hello! I am Rimil</h1>
+              <p class="dek">
+                I am a senior front-end engineer with <span class="emphasis">7 years</span> of experience. I’ve delivered several impactful and innovative products using React &amp; Angular!
+              </p>
+              <p class="supporting">
+                React, TypeScript, JavaScript, Angular, HTML, CSS &amp; Sass — with experience across Cercli, Deel, Paradime Labs, Appsmith, Rippling, and Springboard.
+              </p>
+              <div class="actions">
+                <a class="button primary" href="#">View resume</a>
+                <a class="button" href="mailto:rimildeyjsr@gmail.com">Email Rimil</a>
+                <a class="button" href="#ledger">Browse experience</a>
+              </div>
+            </div>
+            <aside class="hero-side" aria-label="Editorial concept note">
+              <div class="portrait">
+                <div class="portrait-card">
+                  <p class="kicker">Contact</p>
+                  <h2>rimildeyjsr.com</h2>
+                  <p>
+                    rimildeyjsr@gmail.com<br />
+                    +971-50-496-8939<br />
+                    linkedin.com/in/rimildeyjsr/
+                  </p>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <div class="shell rule"></div>
+
+        <section id="chapter">
+          <div class="shell">
+            <div class="section-head">
+              <p class="section-label">Current chapter</p>
+              <p class="section-intro">
+                Member of Technical Staff at Cercli. Worked on the complete re-design and refactor of the Deel card dashboard, simplified the UI/UX with a more intuitive layout, and made the layout responsive.
+              </p>
+            </div>
+            <div class="chapter-grid">
+              <blockquote>
+                “Worked on the complete re-design and refactor of the Deel card dashboard, simplified the UI/UX with a more intuitive layout, and made the layout responsive.”
+              </blockquote>
+              <div>
+                <p class="chapter-copy">
+                  Implemented the Payslips and payments dashboard, collaborating across different product teams, that made the UI more user-friendly, and reduced customer service requests by 2%.
+                </p>
+                <div class="bullet-list" aria-label="Current chapter highlights">
+                  <div class="bullet"><span class="bullet-mark" aria-hidden="true"></span><p class="timeline-copy">Built the MVP version of Expense cards, with card/spend controls, card issuance, expense reports and role based access control.</p></div>
+                  <div class="bullet"><span class="bullet-mark" aria-hidden="true"></span><p class="timeline-copy">Laid the foundation and improved the test coverage of new products, and achieved around <span class="emphasis">50%</span> coverage by mandating tests with every pull request.</p></div>
+                  <div class="bullet"><span class="bullet-mark" aria-hidden="true"></span><p class="timeline-copy">Built a real-time parser for SQL models, simplifying the UI and reducing user friction, leading to <span class="emphasis">~5% faster</span> query validation and iteration.</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="shell rule"></div>
+
+        <section id="evidence">
+          <div class="shell">
+            <div class="section-head">
+              <p class="section-label">Selected evidence</p>
+              <p class="section-intro">
+                Work experience across Cercli, Deel, Paradime Labs, Appsmith, Rippling, and Springboard, with open source contributions to FAST, Reactist, Operational UI, Lexical, and Flexile.
+              </p>
+            </div>
+            <div class="proof-grid">
+              <article class="proof">
+                <p class="kicker">Cercli / Deel</p>
+                <h3>Card dashboard redesign and responsive refactor</h3>
+                <p>
+                  Worked on the complete re-design and refactor of the Deel card dashboard, simplified the UI/UX with a more intuitive layout, and made the layout responsive.
+                </p>
+              </article>
+              <article class="proof">
+                <p class="kicker">Paradime Labs / Appsmith</p>
+                <h3>Validation speed, reliability, and maintainability</h3>
+                <p>
+                  Built a real-time parser for SQL models leading to <span class="emphasis">~5% faster</span> query validation and iteration, and refactored Action selectors from regex to AST based parsing which improved reliability and reduced bugs by <span class="emphasis">8%</span>.
+                </p>
+              </article>
+              <article class="proof">
+                <p class="kicker">Springboard</p>
+                <h3>Performance and operational impact</h3>
+                <p>
+                  Reduced load time of mentor dashboard from 2.5 minutes to <span class="emphasis">under 5 secs</span>, built the project submission feature reducing manual workflows and cutting ops effort by <span class="emphasis">~40%</span>, and optimized course time estimates contributing to <span class="emphasis">~15%</span> increase in 6-month completion rates.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <div class="shell rule"></div>
+
+        <section id="ledger">
+          <div class="shell">
+            <div class="section-head">
+              <p class="section-label">Career ledger</p>
+              <p class="section-intro">
+                Work experience and selected outcomes from Cercli, Deel, Paradime Labs, Appsmith, Rippling, and Springboard.
+              </p>
+            </div>
+            <div class="ledger">
+              <article class="ledger-item">
+                <div class="meta-stack">
+                  <p class="meta">August 2025 — Present</p>
+                  <div class="role">
+                    <h3>Cercli</h3>
+                    <p class="role-title">Member of Technical Staff</p>
+                  </div>
+                </div>
+                <ul class="highlights">
+                  <li>Worked on the complete re-design and refactor of the Deel card dashboard, simplified the UI/UX with a more intuitive layout, and made the layout responsive.</li>
+                  <li>Implemented the Payslips and payments dashboard, collaborating across different product teams, that made our UI more user-friendly, and reduced the customer service requests by <span class="emphasis">2%</span>.</li>
+                  <li>Built the MVP version of Expense cards, with card/spend controls, card issuance, expense reports and role based access control.</li>
+                </ul>
+              </article>
+
+              <article class="ledger-item">
+                <div class="meta-stack">
+                  <p class="meta">July 2024 — August 2025</p>
+                  <div class="role">
+                    <h3>Deel</h3>
+                    <p class="role-title">Senior Front-end Engineer</p>
+                  </div>
+                </div>
+                <ul class="highlights">
+                  <li>Worked on the complete re-design and refactor of the Deel card dashboard, simplified the UI/UX with a more intuitive layout, and made the layout responsive.</li>
+                  <li>Implemented the Payslips and payments dashboard, collaborating across different product teams, that made our UI more user-friendly, and reduced the customer service requests by <span class="emphasis">2%</span>.</li>
+                  <li>Laid the foundation and improving the test coverage of our new products, and achieved around <span class="emphasis">50%</span> coverage by mandating tests with every pull request.</li>
+                </ul>
+              </article>
+
+              <article class="ledger-item">
+                <div class="meta-stack">
+                  <p class="meta">2023 — 2024</p>
+                  <div class="role">
+                    <h3>Paradime Labs</h3>
+                    <p class="role-title">Senior Front-end Engineer</p>
+                  </div>
+                </div>
+                <ul class="highlights">
+                  <li>Built a real-time parser for SQL models, simplifying the UI and reducing user friction, leading to <span class="emphasis">~5% faster</span> query validation and iteration.</li>
+                  <li>Fixed the unit test infrastructure in the repository, and started covering key flows of the product with unit tests to improve reliability.</li>
+                  <li>Implemented role-based access control (RBAC) and automated the audit logs generation, directly contributing to key customer requirements.</li>
+                </ul>
+              </article>
+
+              <article class="ledger-item">
+                <div class="meta-stack">
+                  <p class="meta">2018 — 2023</p>
+                  <div class="role">
+                    <h3>Appsmith · Rippling · Springboard</h3>
+                    <p class="role-title">Selected outcomes across Appsmith, Rippling, and Springboard</p>
+                  </div>
+                </div>
+                <ul class="highlights">
+                  <li>Built auto-indentation on top of the Javascript editor with visual tests and refactored Action selectors from regex to AST based parsing which improved reliability and reduced bugs by <span class="emphasis">8%</span>.</li>
+                  <li>Delivered core inventory management features within <span class="emphasis">2 weeks</span> of onboarding at Rippling, and added integration test coverage for critical flows.</li>
+                  <li>Reduced load time of mentor dashboard from 2.5 minutes to <span class="emphasis">under 5 secs</span> and built the project submission feature reducing manual workflows by <span class="emphasis">~40%</span> at Springboard.</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <div class="shell rule"></div>
+
+        <section>
+          <div class="shell aside-grid">
+            <div class="list-block">
+              <p class="section-label">Open source</p>
+              <h3>Open source contributions</h3>
+              <div class="list">
+                <span>FAST by Microsoft</span>
+                <span>Reactist by Doist</span>
+                <span>Operational UI by Contiamo</span>
+                <span>Lexical by Meta</span>
+                <span>Flexile by Antiwork</span>
+              </div>
+            </div>
+            <div class="list-block">
+              <p class="section-label">Core stack</p>
+              <h3>Skills</h3>
+              <div class="list">
+                <span>React</span>
+                <span>TypeScript</span>
+                <span>Angular</span>
+                <span>JavaScript</span>
+                <span>HTML</span>
+                <span>CSS &amp; Sass</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="shell rule"></div>
+
+        <section id="contact">
+          <div class="shell closing">
+            <div>
+              <p class="section-label">Contact</p>
+              <h2>rimildeyjsr@gmail.com</h2>
+              <p class="note">
+                This file is a throwaway visual preview of the Pencil concept — not the production build.
+              </p>
+            </div>
+            <div class="footer-links">
+              <a href="mailto:rimildeyjsr@gmail.com">rimildeyjsr@gmail.com</a>
+              <a href="https://linkedin.com/in/rimildeyjsr/">LinkedIn</a>
+              <a href="https://github.com/rimildeyjsr">GitHub</a>
+              <a href="#">Resume</a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

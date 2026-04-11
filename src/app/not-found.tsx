@@ -1,23 +1,22 @@
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
+import Link from 'next/link'
 
 export default function NotFound() {
   return (
-    <Container className="flex h-full items-center pt-16 sm:pt-32">
-      <div className="flex flex-col items-center">
-        <p className="text-base font-semibold text-zinc-400 dark:text-zinc-500">
+    <section className="mx-auto flex min-h-[60vh] w-full max-w-[72rem] items-center px-5 py-16 sm:px-8 sm:py-24 lg:px-12">
+      <div>
+        <p className="text-[0.78rem] uppercase tracking-[0.18em] text-[color:var(--muted)]">
           404
         </p>
-        <h1 className="mt-4 text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-          Page not found
+        <h1 className="mt-6 max-w-[10ch] font-[family-name:var(--font-display)] text-[clamp(3rem,8vw,5rem)] leading-[0.95] tracking-[-0.05em] text-[color:var(--ink)]">
+          This page is missing, but the dossier is not.
         </h1>
-        <p className="mt-4 text-base text-zinc-600 dark:text-zinc-400">
-          Sorry, we couldn’t find the page you’re looking for.
+        <p className="mt-6 max-w-[38rem] text-base leading-8 text-[color:var(--muted)]">
+          The route you tried does not exist. Use the link below to return to the main editorial portfolio.
         </p>
-        <Button href="/" variant="secondary" className="mt-4">
+        <Link href="/" className="quiet-underline mt-8 inline-flex text-base text-[color:var(--ink)]">
           Go back home
-        </Button>
+        </Link>
       </div>
-    </Container>
+    </section>
   )
 }
