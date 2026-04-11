@@ -7,7 +7,7 @@ export default function NotFound() {
         <p className="text-[0.78rem] uppercase tracking-[0.18em] text-[color:var(--ink)]">
           404
         </p>
-        <h1 className="mt-6 max-w-[10ch] font-[family-name:var(--font-display)] text-[clamp(3rem,8vw,5rem)] leading-[0.95] tracking-[-0.05em] text-[color:var(--ink)]">
+        <h1 className="mt-6 max-w-[10ch] font-[family-name:var(--font-display)] text-[clamp(3rem,8vw,5rem)] leading-[0.95] tracking-[0.2px] text-[color:var(--ink)]">
           This page is missing, but the site is not.
         </h1>
         <p className="mt-6 max-w-[38rem] text-base leading-8 text-[color:var(--ink)]">

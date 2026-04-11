@@ -15,7 +15,7 @@ export default function AboutPage() {
       <p className="text-[0.78rem] uppercase tracking-[0.18em] text-[color:var(--ink)]">
         About
       </p>
-      <h1 className="mt-6 max-w-[12ch] font-[family-name:var(--font-display)] text-[clamp(3rem,8vw,5.5rem)] leading-[0.95] tracking-[-0.05em] text-[color:var(--ink)]">
+      <h1 className="mt-6 max-w-[12ch] font-[family-name:var(--font-display)] text-[clamp(3rem,8vw,5.5rem)] leading-[0.95] tracking-[0.2px] text-[color:var(--ink)]">
         Frontend work shaped by product clarity and durable systems.
       </h1>
       <p className="mt-8 max-w-[46rem] text-[1.08rem] leading-8 text-[color:var(--ink)] sm:text-[1.18rem] sm:leading-9">

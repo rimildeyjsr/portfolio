@@ -18,7 +18,7 @@ const body = Source_Serif_4({
 })
 
 const siteUrl = 'https://rimildeyjsr.com'
-const title = 'Rimil Dey — Senior frontend engineer'
+const title = 'Rimil Dey - Senior frontend engineer'
 const description =
   'Portfolio for Rimil Dey, a senior frontend engineer focused on improving complex product surfaces, strengthening reliability, and shipping responsive interfaces.'
 

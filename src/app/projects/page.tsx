@@ -15,7 +15,7 @@ export default function ProjectsPage() {
       <p className="text-[0.78rem] uppercase tracking-[0.18em] text-[color:var(--ink)]">
         Selected work
       </p>
-      <h1 className="mt-6 max-w-[12ch] font-[family-name:var(--font-display)] text-[clamp(3rem,8vw,5.5rem)] leading-[0.95] tracking-[-0.05em] text-[color:var(--ink)]">
+      <h1 className="mt-6 max-w-[12ch] font-[family-name:var(--font-display)] text-[clamp(3rem,8vw,5.5rem)] leading-[0.95] tracking-[0.2px] text-[color:var(--ink)]">
         Proof, contribution, and the stack behind the work.
       </h1>
 
@@ -25,7 +25,7 @@ export default function ProjectsPage() {
             <p className="text-[0.78rem] uppercase tracking-[0.18em] text-[color:var(--ink)]">
               {theme.kicker}
             </p>
-            <h2 className="font-[family-name:var(--font-display)] text-[clamp(2rem,4vw,3.1rem)] leading-[1.02] tracking-[-0.045em] text-[color:var(--ink)]">
+            <h2 className="font-[family-name:var(--font-display)] text-[clamp(2rem,4vw,3.1rem)] leading-[1.02] tracking-[0.2px] text-[color:var(--ink)]">
               {theme.title}
             </h2>
             <p className="max-w-[48rem] text-base leading-8 text-[color:var(--ink)]">
