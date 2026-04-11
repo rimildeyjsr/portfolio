@@ -193,14 +193,3 @@ export const personalNotes = [
     bodySmall: true,
   },
 ] as const
-
-export const selectedSignals = [
-  '7 years',
-  '2%',
-  '50%',
-  '~5% faster',
-  '8%',
-  'under 5 secs',
-  '~40%',
-  '~15%',
-] as const
